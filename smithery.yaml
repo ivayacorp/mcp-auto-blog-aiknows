@@ -3,7 +3,9 @@ description: Generate blog content using AI
 private: true
 
 startCommand:
-  args: ["python", "app.py"]
+  args:
+    - python
+    - app.py
 
 tools:
   - name: generate-blog
