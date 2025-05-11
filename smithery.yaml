@@ -10,6 +10,8 @@ startCommand:
 tools:
   - name: generate-blog
     description: Generate a blog post using a topic
+    route: /generate-blog         # ← 이 부분 추가
+    method: POST                  # ← 이 부분 추가
     inputSchema:
       type: object
       properties:
