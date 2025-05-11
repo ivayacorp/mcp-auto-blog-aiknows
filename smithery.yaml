@@ -1,26 +1,25 @@
-name: auto-blog-generator
-description: Generate blog content using AI
-private: true
-
+id: auto-blog-generator
+name: Auto Blog Generator
+description: Python과 Node.js를 활용한 AI 블로그 자동 생성 MCP
+type: http
 startCommand:
   args:
     - python
     - app.py
-
 tools:
   - name: generate-blog
-    description: Generate a blog post using a topic
-    route: /generate-blog         # ← 이 부분 추가
-    method: POST                  # ← 이 부분 추가
+    route: /mcp
+    method: POST
     inputSchema:
       type: object
       properties:
-        topic:
+        keyword:
           type: string
-          description: Blog topic
-      required: [topic]
+        article_url:
+          type: string
+      required: [keyword, article_url]
     outputSchema:
       type: object
       properties:
-        result:
+        blog_content:
           type: string
