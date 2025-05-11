@@ -1,5 +1,22 @@
-name: Auto Blog Generator
-description: 블로그 글을 자동 생성하고 포스트하는 MCP 서버입니다.
-type: stdio
-startCommand: python app.py
-commandFunction: main
+name: auto-blog-generator
+description: Generate blog content using AI
+private: true
+
+startCommand:
+  args: ["python", "app.py"]
+
+tools:
+  - name: generate-blog
+    description: Generate a blog post using a topic
+    inputSchema:
+      type: object
+      properties:
+        topic:
+          type: string
+          description: Blog topic
+      required: [topic]
+    outputSchema:
+      type: object
+      properties:
+        result:
+          type: string
