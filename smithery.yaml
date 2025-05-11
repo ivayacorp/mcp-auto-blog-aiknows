@@ -1,19 +1,5 @@
-name: mcp-auto-blog-aiknows
-description: 키워드와 기사 링크를 받아 블로그 글을 생성하는 MCP 툴
+name: Auto Blog Generator
+description: 블로그 글을 자동 생성하고 포스트하는 MCP 서버입니다.
 type: stdio
-
-startCommand:
-  command: python
-  args:
-    - app.py
-
-commandFunction: generate_blog_post
-
-tools:
-  - name: generate_blog_post
-    description: 키워드와 기사 URL로 블로그 글을 생성합니다.
-    input:
-      keyword: string
-      article_url: string
-    output:
-      blog_content: string
+startCommand: python app.py
+commandFunction: main
