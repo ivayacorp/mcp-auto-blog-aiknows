@@ -4,7 +4,8 @@ type: stdio
 
 startCommand:
   command: python
-  args: ["app.py"]
+  args:
+    - app.py
 
 commandFunction: generate_blog_post
 
