@@ -1,5 +1,5 @@
 name: mcp-auto-blog-aiknows
-description: 키워드와 기사 URL을 바탕으로 블로그 글을 자동 생성합니다.
+description: 키워드와 기사 링크를 받아 블로그 글을 생성하는 MCP 툴
 type: stdio
 
 startCommand:
@@ -11,7 +11,7 @@ commandFunction: generate_blog_post
 
 tools:
   - name: generate_blog_post
-    description: 키워드와 기사 URL을 받아 블로그 글을 생성합니다.
+    description: 키워드와 기사 URL로 블로그 글을 생성합니다.
     input:
       keyword: string
       article_url: string
